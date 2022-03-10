@@ -80,10 +80,17 @@ font: normal normal bold 30px arial;
 color: #ffffff;
 text-decoration: none;
 }
+
 .button1:hover{
     background-color: #000;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
+.button1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .button1:focus {
 background: #ff5959;
 background: -webkit-gradient(linear, left top, left bottom, from(#ff5959), to(#b62f2f));
@@ -92,12 +99,7 @@ background: linear-gradient(to bottom, #ff5959, #b62f2f);
 color: #ffffff;
 text-decoration: none;
 }
-.button1:active {
-background: #982727;
-background: -webkit-gradient(linear, left top, left bottom, from(#982727), to(#982727));
-background: -moz-linear-gradient(top, #982727, #982727);
-background: linear-gradient(to bottom, #982727, #982727);
-}
+
 .button1:before{
 content:  "\0000a0";
 display: inline-block;
