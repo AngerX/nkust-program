@@ -36,5 +36,5 @@ class OrientationAdmin(admin.ModelAdmin):
 admin.site.register(Orientation, OrientationAdmin)
 
 class SonglistAdmin(admin.ModelAdmin):
-    list_display = ['url', 'name', 'song_name', 'add_time']
+    list_display = ['url', 'name']
 admin.site.register(Songlist, SonglistAdmin)

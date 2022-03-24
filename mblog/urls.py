@@ -18,7 +18,6 @@ from django.urls import path, include
 from robot.views import *
 from django.conf import settings
 from django.conf.urls.static import static
-from chat.views import *
 
 
 urlpatterns = [
@@ -43,10 +42,7 @@ urlpatterns = [
     path("historyMonth/<int:pk>/<str:gameName>/<int:year>/", historyMonth),
     path("historyDay/<int:pk>/<str:gameName>/<int:year>/<int:month>/", historyDay),
     path("historyChart/<int:pk>/<str:gameName>/<int:year>/<int:month>/<int:day>/", historyChart),
-    path('chat/<int:pk>/', lobby),#老歌懷舊登入介面
-    path('chat/game/<int:pk>/', game_area),#老歌懷舊登入介面
-    #path('chat/<int:pk>/', include('chat.urls')),#老歌懷舊登入介面
-    #path('chat/game/<int:pk>/', ),
+    path('chat/<int:pk>/', include('chat.urls')),#老歌懷舊登入介面
 ]
 if settings.DEBUG: #在debug模式啟動時
     #django原本不支援靜態檔，所以要加上這行之後在網頁http://127.0.0.1:8000/media/image/~~~~~.jpg 可直接在網頁上顯示該資料夾底下的圖片
